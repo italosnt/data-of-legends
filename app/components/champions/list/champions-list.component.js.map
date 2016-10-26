@@ -1,1 +1,1 @@
-{"version":3,"file":"champions-list.component.js","sourceRoot":"","sources":["champions-list.component.ts"],"names":[],"mappings":""}
+{"version":3,"file":"champions-list.component.js","sourceRoot":"","sources":["champions-list.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAA0B,eAAe,CAAC,CAAA;AAO1C;IAAA;IAAsC,CAAC;IALvC;QAAC,gBAAS,CAAC;YACT,QAAQ,EAAE,gBAAgB;YAC1B,WAAW,EAAE,6DAA6D;SAC3E,CAAC;;8BAAA;IAEoC,6BAAC;AAAD,CAAC,AAAvC,IAAuC;AAA1B,8BAAsB,yBAAI,CAAA"}
