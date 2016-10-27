@@ -9,15 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var champions_service_1 = require('./../../../services/champions.service');
 var ChampionsListComponent = (function () {
-    function ChampionsListComponent() {
+    function ChampionsListComponent(championsService) {
+        this.championsService = championsService;
     }
+    ChampionsListComponent.prototype.ngOnInit = function () {
+        this.getChampions();
+    };
+    ChampionsListComponent.prototype.getChampions = function () {
+        var _this = this;
+        this.championsService.getChampions().subscribe(function (champions) { return _this.champions = champions; });
+    };
     ChampionsListComponent = __decorate([
         core_1.Component({
             selector: 'champions-list',
-            templateUrl: 'app/components/champions/list/champions-list.component.html'
+            templateUrl: 'app/components/champions/list/champions-list.component.html',
+            providers: [champions_service_1.ChampionsService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [champions_service_1.ChampionsService])
     ], ChampionsListComponent);
     return ChampionsListComponent;
 }());

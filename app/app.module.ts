@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ChampionsListComponent } from './components/champions/list/champions-list.component';
+
+import { ChampionsService } from './services/champions.service';
+
+import { KeysValuesPipe } from './pipes/keys-values.pipe';
 
 @NgModule({
   imports: [
@@ -29,7 +34,8 @@ import { ChampionsListComponent } from './components/champions/list/champions-li
   declarations: [
     AppComponent,
     HomeComponent,
-    ChampionsListComponent
+    ChampionsListComponent,
+    KeysValuesPipe
   ],
   bootstrap: [AppComponent]
 })
